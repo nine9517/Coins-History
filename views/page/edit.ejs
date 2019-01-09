@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Coin</title>
+    <%- include ../css/v1  -%>
+  </head>
+  <body>
+    <div class="container">
+            <div style="text-align:center;"><h1>Coins</h1> <h4 style="text-align: right;"><a href="/coins"><< back</a></h4></div>
+        <form method="post" action="/coins/update/<%= coin._id %>">
+          <div class="form-group">
+            <label for="item">Coin Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= coin.name %>">
+          </div>
+          <div class="form-group">
+            <label for="item">Coin Price</label>
+            <input type="text" class="form-control" id="price" name="price" value="<%= coin.price %>">
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+    <%- include ../js/v1  -%>
+  </body>
+</html>
